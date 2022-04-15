@@ -1,15 +1,8 @@
 {
-  "name": "sqlstring",
+  "name": "@alloc/sqlstring",
   "description": "Simple SQL escape and format for MySQL",
   "version": "2.3.3",
-  "contributors": [
-    "Adri Van Houdt <adri.van.houdt@gmail.com>",
-    "Douglas Christopher Wilson <doug@somethingdoug.com>",
-    "fengmk2 <fengmk2@gmail.com> (http://fengmk2.github.com)",
-    "Kevin Jose Martin <kevin@tiliq.com>",
-    "Nathan Woltman <nwoltman@outlook.com>",
-    "Sergej Sintschilin <seregpie@gmail.com>"
-  ],
+  "contributors": ["Alec Larson"],
   "license": "MIT",
   "keywords": [
     "sqlstring",
@@ -17,7 +10,7 @@
     "escape",
     "sql escape"
   ],
-  "repository": "mysqljs/sqlstring",
+  "repository": "aleclarson/sqlstring",
   "devDependencies": {
     "beautify-benchmark": "0.2.4",
     "benchmark": "2.1.4",
