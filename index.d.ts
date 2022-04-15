@@ -1,16 +1,33 @@
+export interface SqlStringOptions {
+  stringifyObjects?: boolean;
+  timeZone?: string;
+  toJSON?: boolean;
+}
+
 declare const SqlString: {
   escapeId(val: any, forbidQualified?: boolean): string;
-  escape(val: any, stringifyObjects?: boolean, timeZone?: string): string;
-  arrayToList(array: any[], timeZone?: string): string;
+
+  escape(
+    val: any,
+    stringifyObjects?: boolean | SqlStringOptions,
+    timeZone?: string | SqlStringOptions
+  ): string;
+
+  arrayToList(array: any[], timeZone?: string | SqlStringOptions): string;
+
   format(
     sql: string,
     values?: any,
-    stringifyObjects?: boolean,
-    timeZone?: string
+    stringifyObjects?: boolean | SqlStringOptions,
+    timeZone?: string | SqlStringOptions
   ): string;
+
   dateToString(date: any, timeZone?: string): string;
+
   bufferToString(buffer: any): string;
-  objectToValues(object: object, timeZone?: string): string;
+
+  objectToValues(object: object, timeZone?: string | SqlStringOptions): string;
+
   raw(sql: string): { toSqlString(): string };
 };
 
